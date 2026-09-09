@@ -19,11 +19,11 @@ Open the local URL printed by Vite, usually `http://localhost:5173`.
 
 ## 60-second demo
 
-1. Open `/farmer` and note the initial ETA: **11:40 AM - 12:00 PM** and departure: **10:55 AM**.
+1. Open `/farmer` and note the initial ETA: **11:40 - 12:00** and departure: **10:55**.
 2. Open `/operator` and observe the queue, active counters, and normal weighing stage.
 3. Click **Report stage delay** or open `/operator/simulation` and choose **Introduce weighing delay**.
 4. Watch the forecast update through the short `Updating forecast...` state.
-5. Return to `/farmer` and observe the new ETA: **12:05 PM - 12:25 PM** and departure: **11:20 AM**.
+5. Return to `/farmer` and observe the new ETA: **12:05 - 12:25** and departure: **11:20**.
 6. Open the notification icon to show the farmer-facing prototype notification.
 7. Use **Recover centre** or **Reset demo** to return to the starting state.
 

@@ -3,12 +3,11 @@ const baselineQueueAhead = 42
 const baselineProcessingRate = 6
 
 function formatTime(totalMinutes) {
-  const normalizedMinutes = ((totalMinutes % 1440) + 1440) % 1440
+  const roundedMinutes = Math.round(totalMinutes)
+  const normalizedMinutes = ((roundedMinutes % 1440) + 1440) % 1440
   const hours = Math.floor(normalizedMinutes / 60)
   const minutes = normalizedMinutes % 60
-  const suffix = hours >= 12 ? 'PM' : 'AM'
-  const displayHour = hours % 12 || 12
-  return `${displayHour}:${String(minutes).padStart(2, '0')} ${suffix}`
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
 }
 
 export function predictProcurement({ queueAhead, processingRate, stageDelay = 0, travelTime, buffer }) {
